@@ -33,7 +33,7 @@ cp .env.example .env
 ```
 
 Заполни две переменные:
-- `KEITARO_HOST`: адрес админки, например `https://tracker.example/admin`. Из него выводится адрес API: `<хост без /admin>/admin_api/v1`.
+- `KEITARO_HOST`: адрес трекера, например `https://tracker.example`. Из него выводится адрес API: `<хост>/admin_api/v1`.
 - `KEITARO_API_KEY`: API-ключ пользователя Keitaro.
 
 Остальные переменные необязательны, пояснения есть в `.env.example`.

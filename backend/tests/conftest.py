@@ -2,7 +2,7 @@ import os
 
 # Настройки нужны до импорта app (engine создаётся при импорте db)
 os.environ.setdefault("KEITARO_API_KEY", "test-key")
-os.environ.setdefault("KEITARO_HOST", "https://keitaro.test/admin")
+os.environ.setdefault("KEITARO_HOST", "https://keitaro.test")
 
 import copy  # noqa: E402
 

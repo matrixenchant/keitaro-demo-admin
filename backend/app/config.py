@@ -32,11 +32,12 @@ class Settings(BaseSettings):
 
     @model_validator(mode="after")
     def _derive_api_url(self) -> "Settings":
+        # KEITARO_HOST — корень трекера (https://tracker.example); /admin на конце терпим, если вставили URL админки
+        host = self.KEITARO_HOST.strip().rstrip("/").removesuffix("/admin")
         if not self.KEITARO_API_URL:
-            base = self.KEITARO_HOST.strip().rstrip("/").removesuffix("/admin")
-            self.KEITARO_API_URL = f"{base}/admin_api/v1"
+            self.KEITARO_API_URL = f"{host}/admin_api/v1"
         if not self.TRACKER_PUBLIC_URL:
-            self.TRACKER_PUBLIC_URL = self.KEITARO_HOST.strip().rstrip("/").removesuffix("/admin")
+            self.TRACKER_PUBLIC_URL = host
         self.TRACKER_PUBLIC_URL = self.TRACKER_PUBLIC_URL.rstrip("/")
         return self
 
