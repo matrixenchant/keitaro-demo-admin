@@ -1,0 +1,12 @@
+{
+  "name": "keitaro-admin-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "record": "node record.mjs",
+    "dry": "node record.mjs --dry"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}

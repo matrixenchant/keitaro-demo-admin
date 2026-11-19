@@ -1,0 +1,4 @@
+node_modules/
+out/*
+!out/demo.mp4
+*.log
